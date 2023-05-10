@@ -17,7 +17,10 @@ public class OpenStreetMapLocation {
     @JsonProperty("osm_type")
     private String osmType;
 
-    @JsonProperty("bounding_box")
+    @JsonProperty("osm_id")
+    private Long osmId;
+
+    @JsonProperty("boundingbox")
     private List<String> boundingBox;
 
     @JsonProperty("lat")
@@ -41,9 +44,4 @@ public class OpenStreetMapLocation {
     private Double importance;
 
     private String icon;
-
-    private OpenStreetMapLocationAddress address;
-
-    @JsonProperty("extratags")
-    private Map<String, String> extraTags;
 }
