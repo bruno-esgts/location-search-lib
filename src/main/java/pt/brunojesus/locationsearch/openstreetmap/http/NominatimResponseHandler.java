@@ -11,7 +11,16 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
-
+/**
+ * Handles the HTTP Search Response for the {@link NominatimClient}
+ * <p>
+ * Deserializes the JSON response into a {@link List} of {@link OpenStreetMapLocation}
+ *
+ * @author Bruno Jesus
+ * @version 1.0
+ * @see NominatimClient
+ * @since 2023-05-11
+ */
 public class NominatimResponseHandler implements HttpClientResponseHandler<List<OpenStreetMapLocation>> {
 
     private final ObjectMapper objectMapper;
@@ -33,7 +42,8 @@ public class NominatimResponseHandler implements HttpClientResponseHandler<List<
         }
 
         try (InputStream body = response.getEntity().getContent()) {
-            return this.objectMapper.readValue(body, new TypeReference<List<OpenStreetMapLocation>>() {});
+            return this.objectMapper.readValue(body, new TypeReference<List<OpenStreetMapLocation>>() {
+            });
         }
     }
 

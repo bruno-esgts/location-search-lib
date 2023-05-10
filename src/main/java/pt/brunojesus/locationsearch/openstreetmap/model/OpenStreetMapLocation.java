@@ -4,8 +4,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import java.util.List;
-import java.util.Map;
 
+/**
+ * POJO for the OpenStreetMap Nominatim API Location
+ * <p>
+ * <a href="https://nominatim.org/release-docs/develop/api/Output/">Definition on Nominatim Docs</a>
+ *
+ * @author Bruno Jesus
+ * @version 1.0
+ * @since 2023-05-11
+ */
 @Data
 public class OpenStreetMapLocation {
 

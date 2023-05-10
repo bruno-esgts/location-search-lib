@@ -1,5 +1,12 @@
 package pt.brunojesus.locationsearch.exception;
 
+/**
+ * Exception to be thrown when the application is not able to retrieve the location list from the external source
+ *
+ * @author Bruno Jesus
+ * @version 1.0
+ * @since 2023-05-11
+ */
 public class LocationSearchException extends Exception {
 
     public LocationSearchException() {
